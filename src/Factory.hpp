@@ -21,6 +21,7 @@ public:
     void Setup();
     void Run();
     void MainMenu();
+    void ModifyItem();
     void DisplayItems() const;
 };
 
