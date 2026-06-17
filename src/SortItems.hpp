@@ -5,4 +5,5 @@
 class SortItems {
 public:
     SortItems();
+    void SortBySize(Item items[], int totalItems) const;
 };
