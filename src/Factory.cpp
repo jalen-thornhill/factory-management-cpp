@@ -72,6 +72,12 @@ void Factory::MainMenu() {
         case 5:
             DisplayItemsReverse();
             break;
+        case 6:
+            SortItemsByID();
+            break;
+        case 7:
+            SortItemsBySize();
+            break;
 
         case 8:
             RandomizeItemsUniform();

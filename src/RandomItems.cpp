@@ -17,8 +17,20 @@ void RandomItems::RandomizeNormal(Item items[], int totalItems, double mean, dou
     std::default_random_engine generator;
     std::normal_distribution<double> distribution(mean, stddev);
 
+
+
     for (int i = 0; i < totalItems; i++) {
         int randomSize = static_cast<int>(distribution(generator));
+
+        if (randomSize < 10) {
+            randomSize = 10;
+        }
+
+        if (randomSize > 100) {
+            randomSize = 100;
+        }
+
         items[i].setSize(randomSize);
     }
-} 
+}
+
