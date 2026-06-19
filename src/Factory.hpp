@@ -31,5 +31,9 @@ void SearchItemByName() const;
 void DisplayItemsReverse() const;
 void RandomizeItemsUniform();
 void RandomizeItemsNormal();
+
+
+void SortItemsByID();
+void SortItemsBySize();
 };
 

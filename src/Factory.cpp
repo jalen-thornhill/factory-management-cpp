@@ -9,6 +9,7 @@
 #include "Factory.hpp"
 #include "StackItems.hpp"
 #include "RandomItems.hpp"
+#include "SortItems.hpp"
 
 #include <iostream>
 #include <iomanip>
@@ -66,6 +67,10 @@ void Factory::MainMenu() {
 
         case 4:
             SearchItemByName();
+            break;
+
+        case 5:
+            DisplayItemsReverse();
             break;
 
         case 8:
@@ -215,5 +220,22 @@ void Factory::RandomizeItemsNormal() {
     RandomItems randomizer;
     randomizer.RandomizeNormal(items, TOTAL_ITEMS, 50.0, 5.0);
     cout << "Items randomized with normal distribution.\n";
+    DisplayItems();
+}
+
+void Factory::SortItemsByID() {
+    SortItems sorter;
+    sorter.SortByID(items, TOTAL_ITEMS);
+
+    cout << "Items sorted by ID.\n";
+    DisplayItems();
+}
+
+
+void Factory::SortItemsBySize() {
+    SortItems sorter;
+    sorter.SortBySize(items, TOTAL_ITEMS);
+
+    cout << "Items sorted by size.\n";
     DisplayItems();
 }
